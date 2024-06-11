@@ -7,7 +7,6 @@ services:
   
   slave:
     image: redis:latest
-    container_name: redis-slave
     command: redis-server --slaveof redis-master 6379
     depends_on:
       - master
